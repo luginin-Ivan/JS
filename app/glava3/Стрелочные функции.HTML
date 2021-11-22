@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function hello(){
+    	console.log("Hello");
+}
+		hello();    
+	</script>
+	<script>
+		let hello = ()=> console.log("Hello");
+		hello();
+	</script>
+	<script>
+		let print = (mes)=> console.log(mes);
+ 
+		print("Hello Metanit.com");
+		print("Welcome to JavaScript");
+	</script>
+	<script>
+		let print = mes=> console.log(mes);
+ 
+		print("Hello Metanit.com");
+		print("Welcome to JavaScript");
+	</script>
+	<script>
+		let sum = (x, y)=> console.log("Sum =", x + y);
+ 
+		sum(1, 2);      
+		sum(4, 3);      
+		sum(103, 2);    
+	</script>
+	<script>
+		let sum = (x, y)=> x + y;
+ 
+		console.log(sum(1, 2));     
+		console.log(sum(4, 3));     
+		console.log(sum(102, 5));   
+	</script>
+	<script>
+		const hello = name => `Hello, ${name}`;
+ 
+		console.log(hello("Tom"));              
+		console.log(hello("Bob"));              
+		console.log(hello("Frodo Baggins"));
+	</script>
+	<script>
+		let user = (userName, userAge) => ({name: userName, age: userAge});
+ 
+		let tom = user("Tom", 34);
+		let bob = user("Bob", 25);
+		 
+		console.log(tom.name, tom.age);    
+		console.log(bob.name, bob.age);  
+	</script>
+	<script>
+		const square = n => {
+	    let result = n * n;
+	    console.log(result);
+}
+  
+		square(5)
+		square(6);   
+	</script>
+	<script>
+		const square = n => {
+    	let result = n * n;
+    	return result;
+}
+  
+		console.log(square(5));     // 25
+	</script>
+</body>
+</html>	

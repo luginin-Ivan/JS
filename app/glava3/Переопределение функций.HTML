@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script >
+		function display(){
+    	console.log("Доброе утро");
+    		display = function(){
+        console.log("Добрый день");
+    }
+}
+ 
+		display(); 
+		display(); 
+	</script>
+	<script>
+		function display(){
+    	console.log("Доброе утро");
+    		display = function(){
+        console.log("Добрый день");
+    }
+}
+		var displayMessage = display;
+		display();
+		display(); 
+		displayMessage();
+		displayMessage();
+	</script>
+	<script>
+		display(); 
+		display();
+		var displayMessage = display;
+		displayMessage();
+		displayMessage();
+	</script>
+</body>
+</html>	

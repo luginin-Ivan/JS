@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+</head>
+<body>
+<script>
+var a = 5;
+let b = 8;
+const c = 9;
+function displaySum(){
+  
+    var d = a + b + c;
+    console.log(d);
+}
+displaySum();
+</script>
+<script>
+	function print(){
+ 
+    var a1 = 5;
+    let b1 = 8;
+    const c1 = 9;
+    console.log("Function print: a =", a1);
+    console.log("Function print: b =", b1);
+    console.log("Function print: c =", c1);
+}
+	print();
+	console.log("Global: a =", a1); 
+</script>
+<script>
+	{
+	    var a2 = 5;
+	}
+	console.log("a =", a2);
+	 
+	if(true){
+	    var b2 = 6;
+	}
+	console.log("b =", b2);
+	 
+	for(var i2 = 0; i2 < 5; i2++){
+	    var c2 = 7;
+	}
+	console.log("c =", c2);  
+</script>
+<script>
+	if(false){
+    var b3 = 6;
+	}
+	console.log("b =", b3);
+	 
+	for(var i3 = 1; i3 < 0; i3++){
+	    var c3 = 7;
+	}
+	console.log("c =", c3);
+</script>
+<script>
+	var z8 = 89;
+	function print(){
+		var z8 = 10;
+		console.log(z8);
+	}
+	print();
+</script>
+<script>
+	function displayZ(){
+    var z9 = 20;
+    {
+    	var z9 = 30;
+        console.log("Block:", z9);
+    }
+    console.log("Function:", z9);
+}
+</script>
+<script>
+	let z = 10;
+	function displayZ(){
+    let z = 20; 
+    {
+        let z = 30;
+        console.log("Block:", z);
+    }
+     
+    	console.log("Function:", z);
+}
+ 
+displayZ();
+console.log("Global:", z);
+</script>
+<script>
+	const z11 = 10;
+	function displayZ(){
+  
+    const z11 = 20;
+    {
+        const z11 = 30;
+        console.log("Block:", z11);   
+    }
+    	console.log("Function:", z11); 
+}
+ 
+displayZ();
+console.log("Global:", z11);  
+</script>
+<script>
+	function bar(){
+    foo = "25";
+}
+bar();
+console.log(foo);
+</script>
+<script>
+	"use strict";
+	function bar(){
+    foo = "25"; 
+}
+  
+bar();
+console.log(foo);
+</script>
+</body>
+</html>

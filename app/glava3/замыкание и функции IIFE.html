@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function outer(){       
+    	var n;              
+    	return inner(){    
+    }
+}
+	</script>
+	<script>
+		function outer(){
+    	let x = 5;
+    	function inner(){
+        	x++;
+        console.log(x);
+    };
+    	return inner;
+}
+		let fn = outer();   // fn = inner, так как функция outer возвращает функцию inner
+// вызываем внутреннюю функцию inner
+		fn();  
+		fn();  
+		fn();   
+	</script>
+	<script>
+		function multiply(n){
+		var x = n;
+		return function(m){ return x * m;};
+		}
+		var fn1 = multiply(5);
+		var result1 = fn1(6); 
+		console.log(result1); 
+		 
+		var fn2= multiply(4);
+		var result2 = fn2(6);
+		console.log(result2); 
+	</script>
+	<script>
+		function multiply(n){
+	    var x = n;
+	    return function(m){ return x * m;};
+	}
+		var result = multiply(5)(6); // 30
+		console.log(result);
+	</script>
+	<script>
+		(function(){
+    	console.log("Привет мир");
+}());
+ 
+		(function (n){
+     
+    	var result = 1;
+    	for(var i=1; i<=n; i++)
+        result *=i;
+    	console.log("Факториал числа " + n + " равен " + result);
+}(4));
+	</script>
+</body>
+</html>		
